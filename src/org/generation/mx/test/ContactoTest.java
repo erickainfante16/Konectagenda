@@ -17,17 +17,17 @@ public class ContactoTest {
     // Prueba 2: Constructor con parámetros
     @Test
     public void probarConstructorConParametros() {
-        contacto nuevoContacto = new contacto("Axel", "Garcia", 551234567);
+        contacto nuevoContacto = new contacto("Axel", "Garcia", "5551919617");
 
         assertEquals("Axel", nuevoContacto.getNombre());
         assertEquals("Garcia", nuevoContacto.getApellido());
-        assertEquals(551234567, nuevoContacto.getNumero());
+        assertEquals("5551919617", nuevoContacto.getNumero());
     }
 
     // Prueba 3: Getter nombre
     @Test
     public void probarGetNombre() {
-        contacto nuevoContacto = new contacto("Axel", "Garcia", 551234567);
+        contacto nuevoContacto = new contacto("Axel", "Garcia", "5551919617");
 
         assertEquals("Axel", nuevoContacto.getNombre());
     }
@@ -35,7 +35,7 @@ public class ContactoTest {
     // Prueba 4: Getter apellido
     @Test
     public void probarGetApellido() {
-        contacto nuevoContacto = new contacto("Axel", "Garcia", 551234567);
+        contacto nuevoContacto = new contacto("Axel", "Garcia", "5551919617");
 
         assertEquals("Garcia", nuevoContacto.getApellido());
     }
@@ -43,9 +43,9 @@ public class ContactoTest {
     // Prueba 5: Getter número
     @Test
     public void probarGetNumero() {
-        contacto nuevoContacto = new contacto("Axel", "Garcia", 551234567);
+        contacto nuevoContacto = new contacto("Axel", "Garcia", "5551919617");
 
-        assertEquals(551234567, nuevoContacto.getNumero());
+        assertEquals("5551919617", nuevoContacto.getNumero());
     }
 
     // Prueba 6: Setter nombre
@@ -70,18 +70,18 @@ public class ContactoTest {
     @Test
     public void probarSetNumero() {
         contacto nuevoContacto = new contacto();
-        nuevoContacto.setNumero(558765432);
+        nuevoContacto.setNumero("5534545678");
 
-        assertEquals(558765432, nuevoContacto.getNumero());
+        assertEquals("5534545678", nuevoContacto.getNumero());
     }
 
     // Prueba 9: ToString
     @Test
     public void probarToString() {
-        contacto nuevoContacto = new contacto("Axel", "Garcia", 551234567);
+        contacto nuevoContacto = new contacto("Axel", "Garcia", "5551919617");
 
         assertEquals(
-                "Axel Garcia - 551234567",
+                "Axel Garcia - 5551919617",
                 nuevoContacto.toString()
         );
     }

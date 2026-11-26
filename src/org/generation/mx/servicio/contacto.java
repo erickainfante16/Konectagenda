@@ -5,13 +5,13 @@ public class contacto {
     // Atributos
     private String nombre;
     private String apellido;
-    private int numero;
+    private String numero;
 
    //Constructores
     public contacto() { //Constructor vacío
     }
 
-    public contacto(String nombre, String apellido, int numero) {
+    public contacto(String nombre, String apellido, String numero) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.numero = numero;
@@ -34,11 +34,11 @@ public class contacto {
         this.apellido = apellido;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
