@@ -46,7 +46,7 @@ Desarrollar una aplicación de consola para gestionar contactos telefónicos, ap
 ## 🧑‍💻 Equipo de desarrollo
 
 <p align="center">
-  <strong>Conoce a las personas detrás de Konectagenda 💜</strong>
+  <strong>Conoce a las personas detrás de Konectagenda ⚜️😃</strong>
 </p>
 
 <table align="center">
