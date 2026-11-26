@@ -1,50 +1,45 @@
 package org.generation.mx.servicio;
 
-public class contacto {
+import java.util.Objects;
 
-    // Atributos
-    private String nombre;
-    private String apellido;
-    private int numero;
+public class Contacto {
+    private final String nombre;
+    private String telefono;
 
-    //Constructores
-    public contacto() { //Constructor vacío
+    public Contacto(String nombre, String telefono) {
+        this.nombre = nombre.trim();
+        this.telefono = telefono;
     }
 
-    public contacto(String nombre, String apellido, int numero) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.numero = numero;
-    }
-
-    // Getters y Setters
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getTelefono() {
+        return telefono;
     }
 
-    public String getApellido() {
-        return apellido;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    // Un contacto es igual a otro cuando sus nombres son iguales (sin importar mayúsculas)
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Contacto)) return false;
+        Contacto otro = (Contacto) o;
+        return nombre.equalsIgnoreCase(otro.nombre);
     }
 
-    public int getNumero() {
-        return numero;
+    // Debe ser coherente con equals: solo depende del nombre
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre.toLowerCase());
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-    // ToString
     @Override
     public String toString() {
-        return nombre + " " + apellido + " - " + numero;
+        return "Nombre: " + nombre + " | Teléfono: " + telefono;
     }
 }
